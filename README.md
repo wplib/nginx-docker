@@ -3,3 +3,5 @@
 This is the official repository for the [WPLib Box](https://github.com/wplib/wplib-box)
 Nginx Docker container. It contains custom configuration files
 specifically for use with WPLib Box.
+
+This image currently uses Nginx `1.11.0`.

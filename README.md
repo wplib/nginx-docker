@@ -1,7 +1,30 @@
-#WPLib Box Nginx Docker Container
+# nginx-docker Docker Container for wplib
+This is the repository for the [nginx-docker](https://nginx.org/en/) Docker container implemented for [WPLib-Box](https://github.com/wplib/wplib-box).
+It currently provides versions 1.12.2 1.13.8
 
-This is the official repository for the [WPLib Box](https://github.com/wplib/wplib-box)
-Nginx Docker container. It contains custom configuration files
-specifically for use with WPLib Box.
 
-This image currently uses Nginx `1.11.0`.
+## Supported tags and respective Dockerfiles
+
+`1.13.8`, `latest` _([1.13.8/Dockerfile](https://github.com/wplib/nginx-docker/blob/master/1.13.8/Dockerfile))_
+
+`1.12.2` _([1.12.2/Dockerfile](https://github.com/wplib/nginx-docker/blob/master/1.12.2/Dockerfile))_
+
+
+## Setup
+Simply clone this repository to your local machine
+
+`git clone https://github.com/wplib/nginx-docker.git`
+
+and run either...
+
+
+### Building all images
+`make build`
+
+
+### Listing all built images
+`make list`
+
+
+### Cleaning all images
+`make clean`

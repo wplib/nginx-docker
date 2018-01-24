@@ -1,5 +1,5 @@
-# nginx-docker Docker Container for wplib
-This is the repository for the [nginx-docker](https://nginx.org/en/) Docker container implemented for [WPLib-Box](https://github.com/wplib/wplib-box).
+# nginx Docker Container for wplib
+This is the repository for the [nginx](https://nginx.org/en/) Docker container implemented for [WPLib-Box](https://github.com/wplib/wplib-box).
 It currently provides versions 1.12.2 1.13.8
 
 

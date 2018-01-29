@@ -1,0 +1,12 @@
+{
+	"project": "wplib",
+	"name": "nginx",
+	"version": "1.12.2",
+	"majorversion": "1.12",
+	"latest": "",
+	"ports": "-p 8080:80",
+	"volumes": "--mount type=bind,source=/var/www,target=/var/www",
+	"args": "",
+	"env": "MYSQL_VERSION"
+}
+

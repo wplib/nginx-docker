@@ -4,8 +4,10 @@
 	"version": "1.12.2",
 	"majorversion": "1.12",
 	"latest": "",
+	"network": "--network wplibbox",
 	"ports": "-p 8080:80",
 	"volumes": "--mount type=bind,source=/var/www,target=/var/www",
+	"restart": "--restart unless-stopped",
 	"args": "",
 	"env": "MYSQL_VERSION"
 }

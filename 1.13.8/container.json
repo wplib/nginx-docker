@@ -4,8 +4,10 @@
 	"version": "1.13.8",
 	"majorversion": "1.13",
 	"latest": "1",
+	"network": "--network wplibbox",
 	"ports": "-p 8080:80",
 	"volumes": "--mount type=bind,source=/var/www,target=/var/www",
+	"restart": "--restart unless-stopped",
 	"args": "",
 	"env": "NGINX_VERSION"
 }

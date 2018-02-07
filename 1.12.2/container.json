@@ -7,7 +7,7 @@
 	"network": "--network wplibbox",
 	"ports": "-p 8080:80",
 	"volumes": "-v /var/www:/var/www",
-	"restart": "--restart unless-stopped",
+	"restart": "--restart no",
 	"args": "--add-host 'mailhog:172.18.0.1'",
 	"env": "MYSQL_VERSION"
 }

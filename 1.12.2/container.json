@@ -6,9 +6,9 @@
 	"latest": "",
 	"network": "--network wplibbox",
 	"ports": "-p 8080:80",
-	"volumes": "--mount type=bind,source=/var/www,target=/var/www",
+	"volumes": "-v /var/www:/var/www",
 	"restart": "--restart unless-stopped",
-	"args": "",
+	"args": "--add-host 'mailhog:172.18.0.1'",
 	"env": "MYSQL_VERSION"
 }
 

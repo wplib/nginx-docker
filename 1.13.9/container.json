@@ -1,9 +1,9 @@
 {
 	"project": "wplib",
 	"name": "nginx",
-	"version": "1.13.8",
-	"majorversion": "",
-	"latest": "",
+	"version": "1.13.9",
+	"majorversion": "1.13",
+	"latest": "1",
 	"network": "--network wplibbox",
 	"ports": "-p 8080:80",
 	"volumes": "-v /var/www:/var/www",

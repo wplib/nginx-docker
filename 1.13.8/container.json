@@ -4,6 +4,7 @@
 	"version": "1.13.8",
 	"majorversion": "",
 	"latest": "",
+	"class": "webserver",
 	"network": "--network wplibbox",
 	"ports": "-p 8080:80 -p 8443:443",
 	"volumes": "-v /var/www:/var/www",

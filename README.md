@@ -19,8 +19,6 @@ It currently provides versions 1.12.2 1.13.8 1.13.9
 
 `1.13.9`, `1.13`, `latest` _([1.13.9/Dockerfile](https://github.com/wplib/nginx-docker/blob/master/1.13.9/Dockerfile))_
 
-`1.13.8`, `latest` _([1.13.8/Dockerfile](https://github.com/wplib/nginx-docker/blob/master/1.13.8/Dockerfile))_
-
 `1.12.2, `1.12`` _([1.12.2/Dockerfile](https://github.com/wplib/nginx-docker/blob/master/1.12.2/Dockerfile))_
 
 

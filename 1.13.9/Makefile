@@ -6,9 +6,12 @@
 # Determine whether we use "nodeJS" or "JQ".
 JSONCMD := $(shell jq -r '.project' ./container.json)
 ifneq ($(JSONCMD),)
-
 define GetFromPkg
 $(shell jq -r ".$(1)" ./container.json)
+endef
+
+define rawJSON
+$(shell jq -Mc -r '' ./container.json)
 endef
 
 else
@@ -18,12 +21,15 @@ define GetFromPkg
 $(shell node -p "require('./container.json').$(1)")
 endef
 
+define rawJSON
+$(shell node -p "require('./container.json')")
+endef
+
 else
 $(shell )
 
 endif
 endif
-
 
 # Set global variables from container file.
 PROJECT		:= $(call GetFromPkg,project)
@@ -40,7 +46,7 @@ ENV		:= $(call GetFromPkg,env)
 
 IMAGE_NAME	?= $(PROJECT)/$(NAME)
 CONTAINER_NAME	?= $(NAME)-$(VERSION)
-
+CONTAINER_JSON	?= '$(call rawJSON)'
 
 
 .PHONY: build push release clean test shell run start stop rm
@@ -54,12 +60,12 @@ build: Dockerfile
 ifeq ($(PROJECT),)
 	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
 else
-	-docker build -t $(IMAGE_NAME):$(VERSION) --build-arg $(ENV)=$(VERSION) .
+	-docker build -t $(IMAGE_NAME):$(VERSION) --label container.json='$(call rawJSON)' --build-arg $(ENV)=$(VERSION) .
 ifneq ($(MAJORVERSION),)
-	-docker build -t $(IMAGE_NAME):$(MAJORVERSION) --build-arg $(ENV)=$(MAJORVERSION) .
+	-docker tag $(IMAGE_NAME):$(VERSION) $(IMAGE_NAME):$(MAJORVERSION)
 endif
 ifeq ($(LATEST),1)
-	docker build -t $(IMAGE_NAME):latest --build-arg $(ENV)=latest .
+	-docker tag $(IMAGE_NAME):$(VERSION) $(IMAGE_NAME):latest
 endif
 endif
 

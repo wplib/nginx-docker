@@ -3,6 +3,7 @@
 	"name": "nginx",
 	"version": "1.13.9",
 	"majorversion": "1.13",
+	"class": "webserver",
 	"latest": "1",
 	"network": "--network wplibbox",
 	"ports": "-p 8080:80 -p 8443:443",

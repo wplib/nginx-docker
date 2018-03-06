@@ -10,6 +10,7 @@ RUN apk update && \
 	useradd -d /var/cache/nginx -c "WPLib vagrant user" -u 1000 -g 1000 -N -s /bin/bash vagrant && \
 	chown -fhR vagrant:vagrant /var/cache/nginx /var/log/nginx /etc/nginx /usr/lib/nginx /usr/sbin/nginx /usr/share/nginx
 
+COPY container.json /etc/container.json
 COPY files /
 
 EXPOSE 80 443

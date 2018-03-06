@@ -119,6 +119,15 @@ ifeq ($(LATEST),1)
 endif
 endif
 
+
+inspect:
+ifeq ($(PROJECT),)
+	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
+else
+	docker image inspect $(IMAGE_NAME):$(VERSION)
+endif
+
+
 test:
 ifeq ($(PROJECT),)
 	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
@@ -142,12 +151,14 @@ else
 	docker create   --name $(CONTAINER_NAME) $(RESTART)  $(NETWORK) $(PORTS) $(ARGS) $(VOLUMES) $(IMAGE_NAME):$(VERSION)
 endif
 
+
 shell:
 ifeq ($(PROJECT),)
 	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
 else
 	docker run --rm --name $(CONTAINER_NAME)-shell -i -t $(NETWORK) $(PORTS) $(ARGS) $(VOLUMES) $(IMAGE_NAME):$(VERSION) /bin/bash
 endif
+
 
 run:
 ifeq ($(PROJECT),)
@@ -156,6 +167,7 @@ else
 	docker run --rm --name $(CONTAINER_NAME)             $(NETWORK) $(PORTS) $(ARGS) $(VOLUMES) $(IMAGE_NAME):$(VERSION)
 endif
 
+
 start:
 ifeq ($(PROJECT),)
 	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
@@ -163,12 +175,14 @@ else
 	docker start $(CONTAINER_NAME)
 endif
 
+
 stop:
 ifeq ($(PROJECT),)
 	@echo "WPLib: ERROR - You need to install JQ or NodeJS."
 else
 	docker stop $(CONTAINER_NAME)
 endif
+
 
 rm:
 ifeq ($(PROJECT),)

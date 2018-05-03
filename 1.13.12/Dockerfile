@@ -1,4 +1,4 @@
-FROM nginx:1.13.9-alpine
+FROM nginx:1.13.12-alpine
 MAINTAINER WPLib Team <team@wplib.org>
 
 # Change user from "nginx" to "vagrant"

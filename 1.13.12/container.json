@@ -1,7 +1,7 @@
 {
 	"project": "wplib",
 	"name": "nginx",
-	"version": "1.13.9",
+	"version": "1.13.12",
 	"majorversion": "1.13",
 	"latest": "1",
 	"class": "webserver",

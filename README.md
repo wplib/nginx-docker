@@ -1,3 +1,6 @@
+![nginx 1.13.x](https://img.shields.io/badge/nginx-1.13.x-green.svg)
+![nginx 1.12.x](https://img.shields.io/badge/nginx-1.12.x-green.svg)
+
 ```
  __          _______  _      _ _       ____
  \ \        / /  __ \| |    (_) |     |  _ \

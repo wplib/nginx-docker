@@ -10,6 +10,6 @@
 	"volumes": "-v /var/www:/var/www",
 	"restart": "--restart no",
 	"args": "--add-host 'mailhog:172.42.0.1'",
-	"env": "MYSQL_VERSION"
+	"env": "NGINX_VERSION"
 }
 

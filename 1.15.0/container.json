@@ -1,0 +1,15 @@
+{
+	"project": "wplib",
+	"name": "nginx",
+	"version": "1.15.0",
+	"majorversion": "1.15",
+	"latest": "1",
+	"class": "webserver",
+	"network": "--network wplibbox",
+	"ports": "-p 8080:80 -p 8443:443",
+	"volumes": "-v /var/www:/var/www",
+	"restart": "--restart no",
+	"args": "--add-host 'mailhog:172.42.0.1'",
+	"env": "NGINX_VERSION"
+}
+
